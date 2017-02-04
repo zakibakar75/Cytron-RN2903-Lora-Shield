@@ -6,4 +6,9 @@ FYI, i requested Cytron to flash Australia firmware into the shield. The tricky 
 
 Since SCPF is set to use SF7, i also forced the channel to use SF7.
 
+How to use?
+
+Just put all the 3 files into one folder.  Run Arduino IDE and open up the .ino, upload to the board and you are on LoraWAN now. Oh, make sure you have a Gateway for it.
+
+
 
