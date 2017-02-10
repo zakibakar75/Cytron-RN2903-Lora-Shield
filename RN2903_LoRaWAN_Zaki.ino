@@ -109,7 +109,24 @@ void AssignToCharArray(int startArrayNum, char* txData, char* tempData)
   int i;
   
   for(i=startArrayNum; i<(MAX_HEX_DIGIT+startArrayNum); i++)
-  {
-    txData[i] = tempData[i-startArrayNum];
+  {        
+    Serial.print("Array ");Serial.print(i);Serial.print(": ");
+    
+    if(isDigit(tempData[i-startArrayNum]) || isAlpha(tempData[i-startArrayNum]))
+    {
+      Serial.print("Digit/Aplha : "); 
+      Serial.println(tempData[i-startArrayNum]);
+      txData[i] = tempData[i-startArrayNum];  // assign tempData to txData respectively
+    }
+    else
+    {
+      Serial.print("No Digit/Aplha on 2nd tempData buffer means Need to push '0' to the first txData buffer");
+      //Supposedly tempData will always have 2 digits because of HEX, but 
+      //in case of 1-F, it is a single digit, since txData expects 2 digit, 
+      //we force putting '0' in its first buffer.
+      txData[i] = txData[i-1];  //assign the last buffer element to hold the digit
+      txData[i-1] = '0';        //hardcode the first element to old a value of '0'
+      
+    }         
   }
 }
