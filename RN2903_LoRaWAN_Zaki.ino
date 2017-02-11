@@ -9,13 +9,13 @@
 #define MAX_HEX_DIGIT 2
 #define DHT11_PIN 8
 
-
+//Replace all the Info below with the infos you got from your own TTN App
 //************** Device parameters for registration *****************
-char DEVICE_ADDR[] = "2602125E";  //4 bytes required 
-char NWK_SESSION_KEY[] = "06E635B6E76E02DD8BFBFC0B268F3199"; // 16 bytes required
-char APP_SESSION_KEY[] = "745919635797A64960F3C045EF6DB336"; //16 bytes required
+char DEVICE_ADDR[] = "26XXXXXX";  //4 bytes required 
+char NWK_SESSION_KEY[] = "06E635B6E76E02DD8BFBFC0B268FXXXX"; // 16 bytes required
+char APP_SESSION_KEY[] = "745919635797A64960F3C045EF6DXXXX"; //16 bytes required
 char APP_KEY[] = "0AA5AF9F0B74FF519D7FB0FF57D3EB9C"; //16 bytes required
-char APP_EUI[] =  "70B3D57EF00038C7";  //8 bytes required
+char APP_EUI[] =  "70B3D57EF000XXXX";  //8 bytes required
 
 LoRaWAN LoRaWAN(2,3); // Software Serial RX, TX   ** Set to 10, 11 for Mega2560 boards, Set to 5, 4 for Uno 
 dht DHT;
