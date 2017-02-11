@@ -120,12 +120,12 @@ void AssignToCharArray(int startArrayNum, char* txData, char* tempData)
     }
     else
     {
-      Serial.print("No Digit/Aplha on 2nd tempData buffer means Need to push '0' to the first txData buffer");
+      Serial.print("No Digit/Aplha on 2nd tempData buffer means need to push '0' to the first txData buffer");
       //Supposedly tempData will always have 2 digits because of HEX, but 
       //in case of 1-F, it is a single digit, since txData expects 2 digit, 
       //we force putting '0' in its first buffer.
       txData[i] = txData[i-1];  //assign the last buffer element to hold the digit
-      txData[i-1] = '0';        //hardcode the first element to old a value of '0'
+      txData[i-1] = '0';        //hardcode the first element to hold a value of '0'
       
     }         
   }
