@@ -81,7 +81,8 @@ void loop() {
   result=DHT.humidity;
   ConvertResult(result,tempData);
   AssignToCharArray(2, txData, tempData);
-
+  
+  //result below is just a dummy
   result=0xAA;
   ConvertResult(result,tempData);
   AssignToCharArray(4, txData, tempData);
