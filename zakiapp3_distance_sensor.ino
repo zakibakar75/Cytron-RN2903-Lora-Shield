@@ -13,11 +13,11 @@
 #define MAX_HEX_DIGIT 2
 
 //************** Device parameters for registration *****************
-char DEVICE_ADDR[] = "26021A87";  //4 bytes required  
-char NWK_SESSION_KEY[] = "43B820B8DC94A96114A5A27DC1C8565C"; // 16 bytes required
-char APP_SESSION_KEY[] = "89270990E367B84C6C5C2FA3666192F8"; //16 bytes required
-char APP_KEY[] = "0AA5AF9F0B74FF519D7FB0FF57D3EB9C"; //16 bytes required
-char APP_EUI[] =  "70B3D57EF0001D5E";  //8 bytes required
+char DEVICE_ADDR[] = "XXXXXXXX";  //4 bytes required  
+char NWK_SESSION_KEY[] = "XXXX0B8DC94A96114A5A27DC1C8565C"; // 16 bytes required
+char APP_SESSION_KEY[] = "XXXX0990E367B84C6C5C2FA3666192F8"; //16 bytes required
+char APP_KEY[] = "XXXXAF9F0B74FF519D7FB0FF57D3EB9C"; //16 bytes required
+char APP_EUI[] =  "XXXXD57EF0001D5E";  //8 bytes required
 
 LoRaWAN LoRaWAN(2,3); // Software Serial RX, TX   ** Set to 10, 11 for Mega2560 boards, Set to 5, 4 for Uno 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
